@@ -12,10 +12,15 @@ class Room:
     # def check_out_guest(self,guest):
     #     self.guest.remove(guest)
 
-    def enough_capacity(self):
-        return self.capacity
+    # def enough_capacity(self):
+    #     return self.capacity
 
     # def not_enough_capacity(self):
     #     if self.capacity >= len(self.room.guest):
+    #         return 
+
+
+    def favourite_song(self):
+        return "Wohoo"
             
         
