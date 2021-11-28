@@ -30,21 +30,22 @@ class TestRoom(unittest.TestCase):
         self.room.check_in_guest(self.guest2)
         self.assertEqual(2, len(self.room.guest))
 
-    # #remove guest
-    # def test_can_check_out_guest(self):
-    #     self.room.check_out_guest(self.guest)
-    #     self.room.check_out_guest(self.guest2)
-    #     self.assertEqual(0, len(self.room.guest))
+    #remove guest
+    def test_can_check_out_guest(self):
+        self.room.check_in_guest(self.guest)
+        self.room.check_out_guest(self.guest)
+        # self.room.check_out_guest(self.guest2)
+        self.assertEqual(1, len(self.room.guest))
 
-    # #enough space
-    # def test_has_enough_capacity_for_guest(self):
-    #     self.room.enough_capacity()
-    #     self.assertEqual(0, len(self.room.guest))
+    #enough space
+    def test_has_enough_capacity_for_guest(self):
+        self.room.enough_capacity()
+        self.assertEqual(0, len(self.room.guest))
 
-    # #not enough space
-    # def test_has_not_enough_capacity_for_guest(self):
-    #     self.room.not_enough_capacity <= len(self.room.guest)
-    #     self.assertEqual()
+    #not enough space
+    def test_has_not_enough_capacity_for_guest(self):
+        self.room.not_enough_capacity <= len(self.room.guest)
+        self.assertEqual()
     #play customer favourite
     def tset_can_play_guest_fav_song(self):
         self.room.favourie_song(self.song)
